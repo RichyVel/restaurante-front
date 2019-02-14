@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-=======
->>>>>>> 7b2ddd649ce338861380fae75622b1844e8d86b5
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicioPostresService {
 
-<<<<<<< HEAD
   private url = '/MPostres';
   private cabecera;
 
@@ -34,7 +30,3 @@ export class ServicioPostresService {
           );
     }
 }
-=======
-  constructor() { }
-}
->>>>>>> 7b2ddd649ce338861380fae75622b1844e8d86b5

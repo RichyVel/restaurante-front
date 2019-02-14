@@ -8,22 +8,23 @@ import { ServicioplatilloService } from '../../Service/servicioplatillo.service'
   styleUrls: ['./platillos.component.css']
 })
 export class PlatillosComponent implements OnInit {
-    private PlatilloData:any;
+  private PlatillosData:any;
 
-    constructor(private ServicioPlatilloService : ServicioPlatilloServicio)  { }
-  
-    ngOnInit() {
-      this.ServicioPlatilloService.getMPlatillos().subscribe(data => {
-        this.PlatilloData = data;
-        console.log(this.PlatilloData);
-      })
-    }
-    private MPlatillos:MPlatillos
-  
-    public crearMPostres(idPlatillo,NombrePlatillo,ODescripPlatillo){
-      this.MPlatillos= new MPlatillos(idPlatillo,NombrePlatillo,ODescripPlatillo);
-      console.log(this.MPlatillos);
-      this.ServicioPlatilloService.postMPlatillo(this.MPlatillos);
-    }
-  
+  constructor(private ServicioplatilloService : ServicioplatilloService)  { }
+
+  ngOnInit() {
+    this.ServicioplatilloService.getMPlatillos().subscribe(data => {
+      this.PlatillosData = data;
+      console.log(this.PlatillosData);
+    })
   }
+  private MPlatillos:MPlatillos
+
+  public crearMPlatillos(idPostre,NombrePostre,ODescripPostres){
+    this.MPlatillos= new MPlatillos(idPostre,NombrePostre,ODescripPostres);
+    console.log(this.MPlatillos);
+    this.ServicioplatilloService.postMPlatillos(this.MPlatillos);
+  }
+}
+
+

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MBebidas } from '../../../bean/MBebidas';
+import { ServicioBebidasService } from '../../Service/servicio-bebidas.service';
 
 @Component({
   selector: 'app-bebidas',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bebidas.component.css']
 })
 export class BebidasComponent implements OnInit {
+  private BebidasData:any;
 
-  constructor() { }
+  constructor(private ServicioBebidasService : ServicioBebidasService)  { }
 
   ngOnInit() {
+    this.ServicioBebidasService.getMBebidas().subscribe(data => {
+      this.BebidasData = data;
+      console.log(this.BebidasData);
+    })
   }
+  private MBebidas:MBebidas
 
+  public crearMBebidas(idBebida,NombreBebidas,ODescripBebidas){
+    this.MBebidas= new MBebidas(idBebida,NombreBebidas,ODescripBebidas);
+    console.log(this.MBebidas);
+    this.ServicioBebidasService.postMBebidas(this.MBebidas);
+  }
 }

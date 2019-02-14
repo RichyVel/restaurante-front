@@ -6,6 +6,5 @@ export class MPlatillos{
       this.idPlatillo = idPlatillo;
       this.NombrePlatillo = NombrePlatillo;
       this.ODescripPlatillo = ODescripPlatillo;
-
    }
   }
