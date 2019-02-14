@@ -13,30 +13,16 @@ import { SelectpromoComponent } from './Componentes/Promociones/selectpromo/sele
 import { SigueparticipandoComponent } from './Componentes/Promociones/sigueparticipando/sigueparticipando.component';
 import { PromoprocessComponent } from './Componentes/Promociones/promoprocess/promoprocess.component';
 import { RouterModule, Routes} from '@angular/router';
-<<<<<<< HEAD
 import { PlatillosComponent } from './Componentes/menu/platillos/platillos.component';
 import { PostresComponent } from './Componentes/menu/postres/postres.component';
 import { BebidasComponent } from './Componentes/menu/bebidas/bebidas.component';
-=======
-import { ComidasComponent } from './Componentes/menu/comidas/comidas.component';
-import { BebidasComponent } from './Componentes/menu/bebidas/bebidas.component';
-import { PostresComponent } from './Componentes/menu/postres/postres.component';
-import { MenucomidaComponent } from './Componentes/menu/menucomida/menucomida.component';
->>>>>>> 7b2ddd649ce338861380fae75622b1844e8d86b5
 
 const rutas:Routes = [
   {path: '', component:BienvenidoComponent}, //pestaña default
   {path: 'Registro',component:RegistroComponent}, //estas tres lineas le decimos al root a donde nos debe de mandar
   {path: 'login',component:LoginComponent},
-<<<<<<< HEAD
   {path: 'postres', component:PostresComponent},
   {path: 'Menu',component:MenuComponent}
-=======
-  {path: 'Menucomidas', component:ComidasComponent},
-  {path: 'Menubebidas', component:BebidasComponent},
-  {path: 'Menupostre', component:PostresComponent},
-  {path: 'Menudemenu', component:MenucomidaComponent}
->>>>>>> 7b2ddd649ce338861380fae75622b1844e8d86b5
 ]
 
 @NgModule({
@@ -49,17 +35,10 @@ const rutas:Routes = [
     SelectpromoComponent,
     SigueparticipandoComponent,
     PromoprocessComponent,
-<<<<<<< HEAD
     MenuComponent,
     PlatillosComponent,
     PostresComponent,
     BebidasComponent
-=======
-    ComidasComponent,
-    BebidasComponent,
-    PostresComponent,
-    MenucomidaComponent,
->>>>>>> 7b2ddd649ce338861380fae75622b1844e8d86b5
   ],
   imports: [
     BrowserModule,
