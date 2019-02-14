@@ -21,8 +21,7 @@ const rutas:Routes = [
   {path: '', component:BienvenidoComponent}, //pestaña default
   {path: 'Registro',component:RegistroComponent}, //estas tres lineas le decimos al root a donde nos debe de mandar
   {path: 'login',component:LoginComponent},
-  {path: 'postres', component:PostresComponent},
-  {path: 'Menu',component:MenuComponent}
+  {path: 'postres', component:PostresComponent}
 ]
 
 @NgModule({
@@ -35,7 +34,7 @@ const rutas:Routes = [
     SelectpromoComponent,
     SigueparticipandoComponent,
     PromoprocessComponent,
-    MenuComponent,
+   
     PlatillosComponent,
     PostresComponent,
     BebidasComponent
